@@ -1,4 +1,4 @@
 set guioptions-=T " hide toolbar
-set lines=55 columns=100
+set lines=56 columns=160
 
 colorscheme manxome
