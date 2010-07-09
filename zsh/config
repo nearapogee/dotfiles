@@ -9,7 +9,7 @@ export EDITOR='mvim'
 export CFLAGS=-D_FILE_OFFSET_BITS=64
 
 path=(~/bin /usr/local/bin /usr/local/sbin $path)
-manpath=(/usr/local/man /opt/local/share/man $manpath)
+#manpath=(/usr/local/man /opt/local/share/man $manpath)
 
 fpath=(~/.zsh/functions $fpath)
 
