@@ -7,13 +7,20 @@ set incsearch
 set hidden
 
 " syntax
-if (has("gui_running") && !exists("syntax_on"))
+if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
   syntax on " note not enable
   set hlsearch
 endif
 
 if has("autocmd")
   filetype plugin indent on  " enable file type detection
+
+  autocmd FileType text setlocal textwidth=78  " text files limited to 78 characters wide
+
+  autocmd BufReadPost *
+    \ if line("'\'") > 1 && line("'\'") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
 else
   set autoindent             " always set auto indenting
 endif
@@ -53,3 +60,6 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove<cr>
+
+" irb vim
+let g:LustyExplorerSuppressRubyWarning = 1
