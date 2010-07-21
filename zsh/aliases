@@ -1,7 +1,7 @@
 # convienece
-alias edot='mvim ~/bin/dotfiles'
+alias edot='cd ~/bin/dotfiles && mvim'
 alias ehost='sudo mvim /etc/hosts'
-alias essh='mvim ~/.ssh'
+alias essh='cd ~/.ssh && mvim'
 
 # cd
 alias ..='cd ..'

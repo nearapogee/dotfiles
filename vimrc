@@ -17,6 +17,14 @@ if has("autocmd")
 
   autocmd FileType text setlocal textwidth=78  " text files limited to 78 characters wide
 
+  autocmd FileType java,ant call t:javaTabConfig()
+
+  function! t:javaTabConfig()
+    setlocal tabstop=4
+    setlocal shiftwidth=4
+    setlocal expandtab
+  endfunction
+
   autocmd BufReadPost *
     \ if line("'\'") > 1 && line("'\'") <= line("$") |
     \   exe "normal! g`\"" |
