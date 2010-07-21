@@ -20,6 +20,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 REPORTTIME=10 # print elapsed time when more than 10 seconds
 
+setopt ZLE
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
@@ -37,6 +38,16 @@ setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share across sessions
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
+
+zle -N newtab
+
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+bindkey '^[[5D' beginning-of-line
+bindkey '^[[5C' end-of-line
+bindkey '^[[3~' delete-char
+bindkey '^[^N' newtab
+bindkey '^?' backward-delete-char 
 
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 #[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

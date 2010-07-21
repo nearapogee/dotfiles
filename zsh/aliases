@@ -1,5 +1,11 @@
+# convienece
+alias df='mvim ~/bin/dotfiles'
+alias hf='sudo mvim /etc/hosts'
+alias sf='mvim ~/.ssh'
+
 # cd
 alias ..='cd ..'
+
 
 # git
 
