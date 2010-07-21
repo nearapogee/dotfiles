@@ -80,3 +80,5 @@ function! s:SetupSnippets()
     call ExtractSnips("~/.vim/snippets/html", "php")
 endfunction
 
+" vjde
+"let g:vjde_completion_key='<c-space>' 
