@@ -21,6 +21,10 @@ if has("autocmd")
     \ if line("'\'") > 1 && line("'\'") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+
+  " source vimrc after saving
+  autocmd bufwritepost .vimrc source $MYVIMRC  
+
 else
   set autoindent             " always set auto indenting
 endif
@@ -82,3 +86,7 @@ endfunction
 
 " vjde
 "let g:vjde_completion_key='<c-space>' 
+
+" edit vimrc
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
