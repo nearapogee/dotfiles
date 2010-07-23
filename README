@@ -9,6 +9,8 @@ things, incorporate new features that may break other things, change defaults,
 change key mappings, etc. Please make sure you are aware of the risks of using
 these files!
 
+Oh and, use VIM!
+
 
 -Installation
 
@@ -21,6 +23,7 @@ will also need to install any dependencies you need. I would suggest:
 rvm (from http://github.com/wayneeseguin/rvm)
 ruby >= 1.9.1
 mvim >= 7.2 (from http://code.google.com/p/macvim/ if on a mac.)
+git (via http://github.com/mxcl/homebrew)
 zsh - I use 4.3.9. (I have not gotten around to setting up bash.)
 
 ruby gems:
