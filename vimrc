@@ -119,6 +119,8 @@ function! ToggleSpell()
     echo "spell off"
   endif
 endfunction
-
 nmap <C-s> :call ToggleSpell()<CR>
 imap <C-s> <ESC>:call ToggleSpell()<CR>a 
+
+" toggle folding
+nnoremap <space> za
