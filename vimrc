@@ -28,7 +28,7 @@ if has("autocmd")
   endfunction
 
   autocmd FileType java,ant call s:javaTabConfig()
-  function! t:javaTabConfig()
+  function! s:javaTabConfig()
     setlocal tabstop=4
     setlocal shiftwidth=4
     setlocal expandtab

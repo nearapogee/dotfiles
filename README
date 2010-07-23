@@ -1,3 +1,58 @@
 Files owned and maintained by Matt Smith
 
-You may use these files at your own risk.
+You may use these files at your own risk. See included MIT-LICENSE.
+
+Note: This README is a work in progress. Check back for updates or contact me
+with any questions. I am adding more documentation to the config files. As
+these are my personal dotfiles, they will change on my whim. I may try new
+things, incorporate new features that may break other things, change defaults,
+change key mappings, etc. Please make sure you are aware of the risks of using
+these files!
+
+
+-Installation
+
+Do: 'git clone git@github.com:matthewcalebsmith/dotfiles.git' in ~/bin. Then
+you need to symlink the files to the appropriate locations. This means zshrc
+=> ~/.zshrc, vimrc => ~/.vimrc, vim/ => ~/.vim, etc. Those are the minimum
+files. A rake file will be coming in the near future for installation. You
+will also need to install any dependencies you need. I would suggest:
+
+rvm (from http://github.com/wayneeseguin/rvm)
+ruby >= 1.9.1
+mvim >= 7.2 (from http://code.google.com/p/macvim/ if on a mac.)
+zsh - I use 4.3.9. (I have not gotten around to setting up bash.)
+
+ruby gems:
+  interactive_editor
+
+-ZSH Features
++ 'edot' moves to ~/bin/dotfiles and opens mvim.
++ 'ehost' edits host file.
++ 'essh' moves to ~/.ssh and opens mvim
+
+-VIM Features
++ Leader is \.
+
+vimrc:
++ Edit vimrc with <leader>v
++ Auto-source when vimrc is written.
+
+spell checking:
++ Toggle spelling with <C-s> in normal/insert mode.
++ Default <]s> (forward), <[s> (backword), <z=> (suggest), and <zg> good
+addition.
+
+plugins:
++ bufexplorer
++ NERDTree
++ snipMate
++ vim-rails
++ vjde
++ surround
++ tagtag
++ dbtext
+
++ I would suggest reading through the snippets to find out what is available.
++ I would suggest skimming through the gvimrc and vimrc files to know what is
+being done.
