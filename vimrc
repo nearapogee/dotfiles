@@ -5,6 +5,7 @@ set ruler
 set showcmd
 set incsearch
 set hidden
+filetype on
 
 " syntax
 if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
@@ -12,13 +13,21 @@ if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
   set hlsearch
 endif
 
+" Simple Text FileType
+au BufNewFile,BufRead *.txt,*.text   setf text
+
 if has("autocmd")
   filetype plugin indent on  " enable file type detection
 
-  autocmd FileType text setlocal textwidth=78  " text files limited to 78 characters wide
+  autocmd FileType txt,text call s:textConfig()
+  function! s:textConfig()
+    setlocal textwidth=78   " text files limited to 78 characters wide
+    setlocal wrap           " long lines should be split
+    setlocal linebreak      " words should not be split
+    setlocal nolist         " breaks linebreak
+  endfunction
 
-  autocmd FileType java,ant call t:javaTabConfig()
-
+  autocmd FileType java,ant call s:javaTabConfig()
   function! t:javaTabConfig()
     setlocal tabstop=4
     setlocal shiftwidth=4
@@ -31,7 +40,7 @@ if has("autocmd")
     \ endif
 
   " source vimrc after saving
-  autocmd bufwritepost .vimrc source $MYVIMRC  
+  autocmd BufWritePost .vimrc source $MYVIMRC  
 
 else
   set autoindent             " always set auto indenting
@@ -95,6 +104,21 @@ endfunction
 " vjde
 "let g:vjde_completion_key='<c-space>' 
 
-" edit vimrc
+" edit vimrc with <leader>v
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" spell check toggle
+function! ToggleSpell()
+  if !exists("b:spell")
+    setlocal spell spelllang=en_us
+    let b:spell = 1
+    echo "spell on"
+  else
+    setlocal nospell
+    unlet b:spell
+    echo "spell off"
+  endif
+endfunction
+
+nmap <C-s> :call ToggleSpell()<CR>
+imap <C-s> <ESC>:call ToggleSpell()<CR>a 
