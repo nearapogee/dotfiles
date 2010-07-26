@@ -2,6 +2,7 @@
 alias edot='cd ~/bin/dotfiles && mvim'
 alias ehost='sudo mvim /etc/hosts'
 alias essh='cd ~/.ssh && mvim'
+alias egit='cd ~/.gitosis-admin && mvim gitosis.conf'
 
 # cd
 alias ..='cd ..'
