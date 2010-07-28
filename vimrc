@@ -124,5 +124,6 @@ endfunction
 nmap <C-s> :call ToggleSpell()<CR>
 imap <C-s> <ESC>:call ToggleSpell()<CR>a 
 
-" toggle folding
-nnoremap <space> za
+nnoremap <space> za | " toggle folding
+
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
