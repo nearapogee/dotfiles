@@ -6,7 +6,7 @@ fi
 
 export EDITOR='mvim'
 
-export CFLAGS=-D_FILE_OFFSET_BITS=64
+#export CFLAGS=-D_FILE_OFFSET_BITS=64
 
 path=(~/bin /usr/local/bin /usr/local/sbin $path)
 manpath=($manpath)
