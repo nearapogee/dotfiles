@@ -127,3 +127,17 @@ imap <C-s> <ESC>:call ToggleSpell()<CR>a
 nnoremap <space> za | " toggle folding
 
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" taglist config
+let g:Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+map <leader>lt :TlistToggle<cr>
+let g:Tlist_GainFocus_On_ToggleOpen = 1
+let g:Tlist_Use_Right_Window = 1
+
+" omnicompletion
+imap <C-space> <C-X><C-O>
+
+" ruby omnicompletion
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
