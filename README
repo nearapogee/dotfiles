@@ -24,10 +24,13 @@ rvm (from http://github.com/wayneeseguin/rvm)
 ruby >= 1.9.1
 mvim >= 7.2 (from http://code.google.com/p/macvim/ if on a mac.)
 git (via http://github.com/mxcl/homebrew)
+ctags-exuberant (via http://github.com/mxcl/homebrew)
 zsh - I use 4.3.9. (I have not gotten around to setting up bash.)
 
 ruby gems:
   interactive_editor
+
+Finally you need to do a 'git submodule init' and 'git submodule update'.
 
 -ZSH Features
 + 'edot' moves to ~/bin/dotfiles and opens mvim.
@@ -36,6 +39,9 @@ ruby gems:
 
 -VIM Features
 + Leader is \.
+
+ominicompletion:
++ Setup for ruby and for rails.
 
 vimrc:
 + Edit vimrc with <leader>v
@@ -55,7 +61,15 @@ plugins:
 + surround
 + tagtag
 + dbtext
++ taglist
 
 + I would suggest reading through the snippets to find out what is available.
 + I would suggest skimming through the gvimrc and vimrc files to know what is
 being done.
+
+
+ZSH TODO:
+- Add color to prompt.
+
+VIM TODO:
+- Add taglist prototype to status line.
