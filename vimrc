@@ -141,3 +141,6 @@ imap <C-space> <C-X><C-O>
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
+
+" ctags
+let g:ctags_path='/usr/local/bin/ctags'

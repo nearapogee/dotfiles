@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/matt/bin/dotfiles'
 let g:netrw_dirhist_2='/Users/matt/Downloads'
 let g:netrw_dirhist_3='/Users/matt/.rvm/gems/ruby-1.9.1-p378/gems/capistrano-2.5.19/lib/capistrano/recipes/deploy'
 let g:netrw_dirhist_4='/Users/matt'
+let g:netrw_dirhist_5='/Users/matt/practice/java/convert'
+let g:netrw_dirhist_6='/Users/matt/practice/java/convert/src'
+let g:netrw_dirhist_7='/Users/matt/practice/java/convert/src/pack'
+let g:netrw_dirhist_8='/Users/matt/practice/java/convert/src'
