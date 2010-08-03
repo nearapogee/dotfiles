@@ -18,5 +18,5 @@ function! ToggleFullscreen()
     echo "fullscreen off"
   endif
 endfunction
-nmap <C-m> :call ToggleFullscreen()<CR>
-imap <C-m> <ESC>:call ToggleFullscreen()<CR>
+nmap <C-a> :call ToggleFullscreen()<CR>
+"imap <C-m> <ESC>:call ToggleFullscreen()<CR>
