@@ -95,8 +95,8 @@ function! s:SetupSnippets()
 
     "if we're in a rails env then read in the rails snippets
     if filereadable("./config/environment.rb")
-        call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
+        "call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
+        "call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
     endif
 
     call ExtractSnips("~/.vim/snippets/html", "eruby")
@@ -123,7 +123,7 @@ function! ToggleSpell()
   endif
 endfunction
 nmap <C-s> :call ToggleSpell()<CR>
-imap <C-s> <ESC>:call ToggleSpell()<CR>a 
+imap <C-s> <ESC>:call ToggleSpell()<CR>
 
 nnoremap <space> za | " toggle folding
 
