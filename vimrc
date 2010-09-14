@@ -136,8 +136,8 @@ map <leader>lt :TlistToggle<cr>
 let g:Tlist_GainFocus_On_ToggleOpen = 1
 let g:Tlist_Use_Right_Window = 1
 
-" omnicompletion
-imap <C-space> <C-X><C-O>
+" eclim completion
+imap <C-space> <C-X><C-U>
 
 " ruby omnicompletion
 let g:rubycomplete_buffer_loading = 1
