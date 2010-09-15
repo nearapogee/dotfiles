@@ -1,6 +1,8 @@
 set guioptions-=T " hide toolbar
 set lines=40 columns=124
 
+set guifont=Menlo:h12
+
 colorscheme fnaqevan
 "colorscheme vividchalk
 "colorscheme blacksea
