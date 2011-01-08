@@ -1,7 +1,7 @@
 set guioptions-=T " hide toolbar
 set lines=40 columns=124
 
-set guifont=Menlo:h12
+set guifont=Menlo:h14
 
 colorscheme fnaqevan
 "colorscheme vividchalk
