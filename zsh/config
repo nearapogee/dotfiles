@@ -1,19 +1,15 @@
+autoload -U colors && colors
+autoload -U ~/.zsh/functions/*(:t)
+
 if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~(git_info_for_prompt)%# '
+  export PS1='%{$fg[red]%}%m:%3~(git_info_for_prompt)%# %{$reset_color%}'
 else
-  export PS1='$(rvm-prompt) %3~$(git_info_for_prompt)%# '
+  export PS1='%{$fg[cyan]%}$(rvm-prompt) %3~$(git_info_for_prompt)%# %{$reset_color%}'
 fi
 
-export EDITOR='mvim'
+export EDITOR=mvim
 
 #export CFLAGS=-D_FILE_OFFSET_BITS=64
-
-path=(~/bin /usr/local/bin /usr/local/sbin $path)
-manpath=($manpath)
-
-fpath=(~/.zsh/functions $fpath)
-
-autoload -U ~/.zsh/functions/*(:t)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -29,7 +25,7 @@ setopt LOCAL_TRAPS # allow functions to have local traps
 setopt HIST_VERIFY
 setopt SHARE_HISTORY # share history between sessions ???
 setopt EXTENDED_HISTORY # add timestamps to history
-setopt PROMPT_SUBST
+setopt PROMPT_SUBST # allow functions in prompt
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
@@ -49,5 +45,4 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char 
 
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-#[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
