@@ -1,7 +1,14 @@
 set guioptions-=T " hide toolbar
+
+if has('gui_gtk2')
+  set guioptions-=M " hide menubar
+endif
+
+set guioptions-=m " hide menubar
+
 set lines=32 columns=124
 
-set guifont=Monaco:h14
+"set guifont=Monaco:h14
 
 colorscheme fnaqevan
 "colorscheme vividchalk
