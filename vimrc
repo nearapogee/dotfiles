@@ -9,14 +9,24 @@ set incsearch
 set hidden
 filetype on
 
+let mapleader=";"
+
 " syntax
 if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
   syntax on " note not enable
   set hlsearch
 endif
 
+syntax on
+colorscheme fnaqevan
+"colorscheme vividchalk
+"colorscheme blacksea
+
 " Simple Text FileType
 au BufNewFile,BufRead *.txt,*.text   setf text
+
+" move .swp files to /tmp
+set directory=/tmp
 
 if has("autocmd")
   filetype plugin indent on  " enable file type detection
@@ -189,3 +199,8 @@ function! AlignAssignments()
 
 endfunction
 nmap <silent> ;= :call AlignAssignments()<CR>
+
+" CoffeeScript
+au BufWritePost *.coffee silent CoffeeMake! | cwindow 3
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent "nofoldenable
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab

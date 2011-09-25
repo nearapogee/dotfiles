@@ -8,6 +8,7 @@ else
 fi
 
 export EDITOR=mvim
+export LESS="-rXFK"
 
 #export CFLAGS=-D_FILE_OFFSET_BITS=64
 
