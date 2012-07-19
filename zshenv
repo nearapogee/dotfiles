@@ -1,4 +1,4 @@
-path=(~/bin /usr/local/bin /usr/local/sbin $path)
+path=(~/bin ~/.rbenv/bin /usr/local/nginx/sbin /usr/local/bin /usr/local/sbin $path)
 manpath=($manpath)
 fpath=(~/.zsh/functions $fpath)
 

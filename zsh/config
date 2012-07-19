@@ -4,10 +4,10 @@ autoload -U ~/.zsh/functions/*(:t)
 if [[ -n $SSH_CONNECTION ]]; then
   export PS1='%{$fg[red]%}%m:%3~(git_info_for_prompt)%# %{$reset_color%}'
 else
-  export PS1='%{$fg[cyan]%}$(rvm-prompt) %3~$(git_info_for_prompt)%# %{$reset_color%}'
+  export PS1='%{$fg[cyan]%} %3~$(git_info_for_prompt)%# %{$reset_color%}'
 fi
 
-export EDITOR=mvim
+export EDITOR=vim
 export LESS="-rXFK"
 
 #export CFLAGS=-D_FILE_OFFSET_BITS=64
@@ -47,3 +47,4 @@ bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char 
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+eval "$(rbenv init -)"
