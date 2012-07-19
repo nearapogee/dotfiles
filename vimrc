@@ -9,7 +9,7 @@ set incsearch
 set hidden
 filetype on
 
-let mapleader=";"
+let mapleader="\\"
 
 " syntax
 if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
@@ -201,6 +201,10 @@ endfunction
 nmap <silent> ;= :call AlignAssignments()<CR>
 
 " CoffeeScript
-au BufWritePost *.coffee silent CoffeeMake! | cwindow 3
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent "nofoldenable
+"au BufWritePost *.coffee silent CoffeeMake! | cwindow 3
+"au BufNewFile,BufReadPost *.coffee setl foldmethod=indent "nofoldenable
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.coffee setl ai
+
+" Fabrication Gem
+autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=model()
