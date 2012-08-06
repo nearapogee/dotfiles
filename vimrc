@@ -12,6 +12,9 @@ filetype on
 
 let mapleader="\\"
 
+" make delete/backspace consistent on all systems
+set backspace=indent,eol,start
+
 " syntax
 if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
   syntax on " note not enable
