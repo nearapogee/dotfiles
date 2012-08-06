@@ -1,6 +1,7 @@
 set nocompatible                                    " vim mode
 
-silent! call pathogen#runtime_append_all_bundles()  " load plugins with pathogen
+"silent! call pathogen#runtime_append_all_bundles()  " load plugins with pathogen
+call pathogen#infect()
 
 set history=50
 set ruler
