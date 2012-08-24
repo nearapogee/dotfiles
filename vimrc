@@ -1,6 +1,7 @@
 set nocompatible                                    " vim mode
 
-silent! call pathogen#runtime_append_all_bundles()  " load plugins with pathogen
+"silent! call pathogen#runtime_append_all_bundles()  " load plugins with pathogen
+call pathogen#infect()
 
 set history=50
 set ruler
@@ -10,6 +11,9 @@ set hidden
 filetype on
 
 let mapleader="\\"
+
+" make delete/backspace consistent on all systems
+set backspace=indent,eol,start
 
 " syntax
 if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
