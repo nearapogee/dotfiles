@@ -1,0 +1,86 @@
+# conky configuration
+#
+# The list of variables has been removed from this file in favour
+# of keeping the documentation more maintainable.
+# Check http://conky.sf.net for an up-to-date-list.
+#
+# For ideas about how to modify conky, please see:
+# http://crunchbanglinux.org/forums/topic/59/my-conky-config/
+#
+# For help with conky, please see:
+# http://crunchbanglinux.org/forums/topic/2047/conky-help/
+#
+# Enjoy! :)
+##############################################
+#  Settings
+##############################################
+background yes
+use_xft yes
+xftfont monospace:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window no
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color d8d8d8
+default_shade_color 000000
+default_outline_color d9d7d6
+maximum_width 275
+alignment top_left
+gap_x 12
+gap_y 32
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+short_units yes
+override_utf8_locale no
+##############################################
+#  Output
+##############################################
+TEXT
+${hr}
+$nodename - $sysname $kernel
+
+Uptime:$alignr$uptime
+Load:$alignr$loadavg
+Processes:$alignr$running_processes / $processes
+Threads:$alignr$running_threads / $threads
+
+Disk usage:$alignr${fs_used /} / ${fs_size /}
+Swap usage:$alignr$swap / $swapmax
+RAM:$alignr$mem / $memmax
+VRAM Threshold:$alignr${nvidia threshold}
+VRAM Temperature:$alignr${nvidia temp} C
+
+CPU:$alignr${cpu cpu0}%  ${cpubar cpu8 8,198}
+${cpugraph cpu0 32,275}
+1 ${cpubar cpu1 8,80} ${cpu cpu1}%$alignr${cpu cpu2}% ${cpubar cpu2 8,80} 2
+3 ${cpubar cpu3 8,80} ${cpu cpu3}%$alignr${cpu cpu4}% ${cpubar cpu4 8,80} 4
+5 ${cpubar cpu5 8,80} ${cpu cpu5}%$alignr${cpu cpu6}% ${cpubar cpu6 8,80} 6
+7 ${cpubar cpu7 8,80} ${cpu cpu7}%$alignr${cpu cpu8}% ${cpubar cpu8 8,80} 8
+Load:$alignr$loadavg
+  ${top name 1} $alignr${top pid 1} ${top cpu 1} ${top mem 1}
+  ${top name 2} $alignr${top pid 2} ${top cpu 2} ${top mem 2}
+  ${top name 3} $alignr${top pid 3} ${top cpu 3} ${top mem 3}
+  ${top name 4} $alignr${top pid 4} ${top cpu 4} ${top mem 4}
+  ${top name 5} $alignr${top pid 5} ${top cpu 5} ${top mem 5}
+$alignr PID    CPU    MEM
+
+RAM:   $memperc% $alignr$mem   ${membar 8,78}
+  ${top_mem name 1} $alignr${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+  ${top_mem name 2} $alignr${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+  ${top_mem name 3} $alignr${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
+  ${top_mem name 4} $alignr${top_mem pid 4} ${top_mem cpu 4} ${top_mem mem 4}
+  ${top_mem name 5} $alignr${top_mem pid 5} ${top_mem cpu 5} ${top_mem mem 5}
+$alignr PID    CPU    MEM
+eth0:
+${offset 28}Down: ${downspeed eth0} k/s ${alignr}Up: ${upspeed eth0} k/s
+${downspeedgraph eth0 32,135 -l} $alignr${upspeedgraph eth0 32,135 -l}
+${hr}
