@@ -56,8 +56,6 @@ Threads:$alignr$running_threads / $threads
 Disk usage:$alignr${fs_used /} / ${fs_size /}
 Swap usage:$alignr$swap / $swapmax
 RAM:$alignr$mem / $memmax
-VRAM Threshold:$alignr${nvidia threshold}
-VRAM Temperature:$alignr${nvidia temp} C
 
 CPU:$alignr${cpu cpu0}%  ${cpubar cpu8 8,198}
 ${cpugraph cpu0 32,275}
@@ -65,6 +63,7 @@ ${cpugraph cpu0 32,275}
 3 ${cpubar cpu3 8,80} ${cpu cpu3}%$alignr${cpu cpu4}% ${cpubar cpu4 8,80} 4
 5 ${cpubar cpu5 8,80} ${cpu cpu5}%$alignr${cpu cpu6}% ${cpubar cpu6 8,80} 6
 7 ${cpubar cpu7 8,80} ${cpu cpu7}%$alignr${cpu cpu8}% ${cpubar cpu8 8,80} 8
+
 Load:$alignr$loadavg
   ${top name 1} $alignr${top pid 1} ${top cpu 1} ${top mem 1}
   ${top name 2} $alignr${top pid 2} ${top cpu 2} ${top mem 2}
