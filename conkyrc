@@ -82,4 +82,7 @@ $alignr PID    CPU    MEM
 eth0:
 ${offset 28}Down: ${downspeed eth0} k/s ${alignr}Up: ${upspeed eth0} k/s
 ${downspeedgraph eth0 32,135 -l} $alignr${upspeedgraph eth0 32,135 -l}
+wlan0:
+${offset 28}Down: ${downspeed wlan0} k/s ${alignr}Up: ${upspeed wlan0} k/s
+${downspeedgraph wlan0 32,135 -l} $alignr${upspeedgraph wlan0 32,135 -l}
 ${hr}
