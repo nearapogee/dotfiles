@@ -3,3 +3,5 @@ manpath=($manpath)
 fpath=(~/.zsh/functions $fpath)
 
 export NODE_PATH=/usr/local/lib/node_modules
+
+eval "$(rbenv init -)"

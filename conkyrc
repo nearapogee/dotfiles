@@ -20,10 +20,12 @@ xftfont monospace:size=9
 xftalpha 1
 update_interval 1.0
 total_run_times 0
-own_window no
+own_window yes #no
 own_window_transparent yes
-own_window_type override
+own_window_type normal
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_class Conky
+own_window_argb_visual yes
 double_buffer yes
 draw_shades no
 draw_outline no
@@ -33,8 +35,8 @@ default_color d8d8d8
 default_shade_color 000000
 default_outline_color d9d7d6
 maximum_width 275
-alignment top_left
-gap_x 12
+alignment top_right
+gap_x 16
 gap_y 32
 no_buffers yes
 uppercase no
@@ -57,12 +59,10 @@ Disk usage:$alignr${fs_used /} / ${fs_size /}
 Swap usage:$alignr$swap / $swapmax
 RAM:$alignr$mem / $memmax
 
-CPU:$alignr${cpu cpu0}%  ${cpubar cpu8 8,198}
+CPU:$alignr${cpu cpu0}%  ${cpubar cpu0 8,198}
 ${cpugraph cpu0 32,275}
 1 ${cpubar cpu1 8,80} ${cpu cpu1}%$alignr${cpu cpu2}% ${cpubar cpu2 8,80} 2
 3 ${cpubar cpu3 8,80} ${cpu cpu3}%$alignr${cpu cpu4}% ${cpubar cpu4 8,80} 4
-5 ${cpubar cpu5 8,80} ${cpu cpu5}%$alignr${cpu cpu6}% ${cpubar cpu6 8,80} 6
-7 ${cpubar cpu7 8,80} ${cpu cpu7}%$alignr${cpu cpu8}% ${cpubar cpu8 8,80} 8
 
 Load:$alignr$loadavg
   ${top name 1} $alignr${top pid 1} ${top cpu 1} ${top mem 1}
