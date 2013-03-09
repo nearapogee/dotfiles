@@ -9,6 +9,7 @@ set showcmd
 set incsearch
 set hidden
 filetype on
+filetype plugin on "for gocode
 
 let mapleader="\\"
 
@@ -25,9 +26,6 @@ syntax on
 colorscheme fnaqevan
 "colorscheme vividchalk
 "colorscheme blacksea
-
-" Simple Text FileType
-au BufNewFile,BufRead *.txt,*.text   setf text
 
 " move .swp files to /tmp
 set directory=/tmp
