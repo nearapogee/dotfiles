@@ -63,6 +63,8 @@ CPU:$alignr${cpu cpu0}%  ${cpubar cpu0 8,198}
 ${cpugraph cpu0 32,275}
 1 ${cpubar cpu1 8,80} ${cpu cpu1}%$alignr${cpu cpu2}% ${cpubar cpu2 8,80} 2
 3 ${cpubar cpu3 8,80} ${cpu cpu3}%$alignr${cpu cpu4}% ${cpubar cpu4 8,80} 4
+5 ${cpubar cpu5 8,80} ${cpu cpu5}%$alignr${cpu cpu6}% ${cpubar cpu6 8,80} 6
+7 ${cpubar cpu7 8,80} ${cpu cpu7}%$alignr${cpu cpu8}% ${cpubar cpu8 8,80} 8
 
 Load:$alignr$loadavg
   ${top name 1} $alignr${top pid 1} ${top cpu 1} ${top mem 1}
