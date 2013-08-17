@@ -7,4 +7,4 @@ export GOROOT=/usr/local/go
 #export GOPATH=~/gocode
 path=(~/bin ~/.rbenv/bin /usr/local/go/bin /usr/local/nginx/sbin /usr/local/bin /usr/local/sbin $path)
 
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
