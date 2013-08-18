@@ -78,6 +78,13 @@ set laststatus=2
 set number
 set numberwidth=5
 
+" long lines
+set colorcolumn=80
+highlight ColorColumn ctermbg=Black guibg=Cyan
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
+match OverLength /\%81v.*/
+
 " tab completion
 set completeopt=longest,menu
 set wildmode=list:longest,list:full
