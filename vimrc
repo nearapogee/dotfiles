@@ -54,7 +54,7 @@ if has("autocmd")
     \ endif
 
   " source vimrc after saving
-  autocmd BufWritePost .vimrc source $MYVIMRC  
+  autocmd BufWritePost .vimrc source $MYVIMRC
 
 else
   set autoindent             " always set auto indenting
@@ -70,7 +70,7 @@ set laststatus=2
 
 " remappings
 "imap <Tab <C-N>           | " map autocomplete to tab
-"nmap <C-x> :nohl<CR>  
+"nmap <C-x> :nohl<CR>
 
 " color scheme
 
@@ -82,8 +82,11 @@ set numberwidth=5
 set colorcolumn=80
 highlight ColorColumn ctermbg=Black guibg=Cyan
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
-match OverLength /\%81v.*/
+"match OverLength /\%81v.*/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+
+" trailing white space
+match Todo /\s\+$/
 
 " tab completion
 set completeopt=longest,menu
@@ -124,7 +127,7 @@ function! s:SetupSnippets()
 endfunction
 
 " vjde
-"let g:vjde_completion_key='<c-space>' 
+"let g:vjde_completion_key='<c-space>'
 
 " edit vimrc with <leader>v
 nmap <leader>v :tabedit $MYVIMRC<CR>
