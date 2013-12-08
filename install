@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+dot_files =  %w(vim vimrc gvimrc)
+dot_files += %w(zsh zshenv zshrc zlogin zprofile)
+dot_files += %w(gemrc irbrc)
+
+dot_files.each do |file|
+  FileUtils.ln_sf File.join(Dir.pwd, file), File.join(ENV['HOME'], ".#{file}")
+end
+
+FileUtils.ln_sf File.join(Dir.pwd, "conkyrc#{`nproc`.chomp}"), File.join(ENV['HOME'], ".conkyrc")
