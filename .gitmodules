@@ -22,3 +22,6 @@
 [submodule "vim/bundle/ctlp.vim"]
 	path = vim/bundle/ctlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-slim"]
+	path = vim/bundle/vim-slim
+	url = git://github.com/slim-template/vim-slim.git
