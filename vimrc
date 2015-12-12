@@ -27,6 +27,8 @@ colorscheme fnaqevan
 "colorscheme vividchalk
 "colorscheme blacksea
 
+au BufRead,BufNewFile *.jst.ejs setfiletype html
+
 " move .swp files to /tmp
 set directory=/tmp
 
