@@ -214,6 +214,10 @@ function! AlignAssignments()
 endfunction
 nmap <silent> ;= :call AlignAssignments()<CR>
 
+" Javascript
+let javascript_enable_domhtmlcss = 1
+let g:jsx_ext_required = 0
+
 " CoffeeScript
 "au BufWritePost *.coffee silent CoffeeMake! | cwindow 3
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent "nofoldenable
