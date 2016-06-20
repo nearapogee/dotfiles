@@ -27,6 +27,8 @@ colorscheme fnaqevan
 "colorscheme vividchalk
 "colorscheme blacksea
 
+au BufRead,BufNewFile *.jst.ejs setfiletype html
+
 " move .swp files to /tmp
 set directory=/tmp
 
@@ -211,6 +213,10 @@ function! AlignAssignments()
 
 endfunction
 nmap <silent> ;= :call AlignAssignments()<CR>
+
+" Javascript
+let javascript_enable_domhtmlcss = 1
+let g:jsx_ext_required = 0
 
 " CoffeeScript
 "au BufWritePost *.coffee silent CoffeeMake! | cwindow 3
