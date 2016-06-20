@@ -12,5 +12,5 @@ if (( $+commands[rbenv] )) ; then
 fi
 if (( $+commands[chruby-exec] )) ; then
   source /usr/local/share/chruby/chruby.sh
-  chruby 2.2
+  chruby 2.3.1
 fi
