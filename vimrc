@@ -16,6 +16,9 @@ let mapleader="\\"
 " make delete/backspace consistent on all systems
 set backspace=indent,eol,start
 
+" always write a true file
+set backupcopy=yes
+
 " syntax
 if (&t_Co < 2 || has("gui_running")) && !exists("syntax_on")
   syntax on " note not enable
@@ -126,6 +129,8 @@ function! s:SetupSnippets()
     call ExtractSnips("~/.vim/snippets/html", "eruby")
     call ExtractSnips("~/.vim/snippets/html", "xhtml")
     call ExtractSnips("~/.vim/snippets/html", "php")
+    call ExtractSnips("~/.vim/snippets/html", "js")
+    call ExtractSnips("~/.vim/snippets/html", "jsx")
 endfunction
 
 " vjde
@@ -133,6 +138,9 @@ endfunction
 
 " edit vimrc with <leader>v
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+"ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " spell check toggle
 function! ToggleSpell()
