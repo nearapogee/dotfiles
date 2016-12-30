@@ -140,7 +140,7 @@ endfunction
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 "ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](cache|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " spell check toggle
 function! ToggleSpell()
