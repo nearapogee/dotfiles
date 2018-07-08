@@ -113,7 +113,7 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove<cr>
 
 " irb vim
-let g:LustyExplorerSuppressRubyWarning = 1
+" let g:LustyExplorerSuppressRubyWarning = 1
 
 "snipmate setup
 source ~/.vim/snippets/support_functions.vim
