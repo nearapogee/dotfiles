@@ -3,7 +3,8 @@
 ```bash
 apt install zsh vim-gtik
 chsh -s zsh
-git clone git@github.com:matthewcalebsmith/dotfiles.git ~/bin/dotfiles
+mkdir -p ~/bin
+git clone git@github.com:nearapoee/dotfiles.git ~/bin/dotfiles
 git submodule init
 git submodule update
 cd ~/bin/dotfiles && ./install
