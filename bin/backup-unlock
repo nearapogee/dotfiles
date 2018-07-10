@@ -1,0 +1,10 @@
+#!/bin/bash
+
+HOME=/home/matt
+RESTIC=$HOME/bin/restic
+
+CREDENTIALS=$HOME/.restic
+INCLUDE=$HOME/.restic-include
+EXCLUDE=$HOME/.restic-exclude
+
+sudo sh -c "export $(cat $CREDENTIALS | xargs) && $RESTIC unlock && unset $(cat $CREDENTIALS | grep -v ^# | sed -E 's/(.*)=.*/\1/' | xargs)"
