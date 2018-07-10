@@ -1,43 +1,24 @@
-Files owned and maintained by Matt Smith
+## Installation
 
-You may use these files at your own risk. See included MIT-LICENSE.
+```bash
+apt install zsh vim-gtik
+chsh -s zsh
+git clone git@github.com:matthewcalebsmith/dotfiles.git ~/bin/dotfiles
+git submodule init
+git submodule update
+cd ~/bin/dotfiles && ./install
+```
 
-Note: This README is a work in progress. Check back for updates or contact me
-with any questions. I am adding more documentation to the config files. As
-these are my personal dotfiles, they will change on my whim. I may try new
-things, incorporate new features that may break other things, change defaults,
-change key mappings, etc. Please make sure you are aware of the risks of using
-these files!
+NOTE: Make sure `vim --version | grep ruby` returns +ruby
 
-Oh and, use VIM!
+## Update submodules
+
+```bash
+git submodule foreach git pull origin master
+```
 
 
--Installation
-
-Do: 'git clone git@github.com:matthewcalebsmith/dotfiles.git' in ~/bin. Then
-you need to symlink the files to the appropriate locations. This means zshrc
-=> ~/.zshrc, vimrc => ~/.vimrc, vim/ => ~/.vim, etc. Those are the minimum
-files. A rake file will be coming in the near future for installation. You
-will also need to install any dependencies you need. I would suggest:
-
-rvm (from http://github.com/wayneeseguin/rvm)
-ruby >= 1.9.1
-mvim >= 7.2 (from http://code.google.com/p/macvim/ if on a mac.)
-git (via http://github.com/mxcl/homebrew)
-ctags-exuberant (via http://github.com/mxcl/homebrew)
-zsh - I use 4.3.9. (I have not gotten around to setting up bash.)
-
-ruby gems:
-  interactive_editor
-
-Finally you need to do a 'git submodule init' and 'git submodule update'.
-
--ZSH Features
-+ 'edot' moves to ~/bin/dotfiles and opens mvim.
-+ 'ehost' edits host file.
-+ 'essh' moves to ~/.ssh and opens mvim
-
-ZSH Load Order:
+ZSH Load Order Reference:
 +----------------+-----------+-----------+------+
 |                |Interactive|Interactive|Script|
 |                |login      |non-login  |      |
@@ -67,7 +48,7 @@ ZSH Load Order:
 |/etc/zlogout    |    J      |           |      |
 +----------------+-----------+-----------+------+
 
--VIM Features
+## VIM Features
 + Leader is \.
 
 ominicompletion:
@@ -92,14 +73,3 @@ plugins:
 + tagtag
 + dbtext
 + taglist
-
-+ I would suggest reading through the snippets to find out what is available.
-+ I would suggest skimming through the gvimrc and vimrc files to know what is
-being done.
-
-
-ZSH TODO:
-- Add color to prompt.
-
-VIM TODO:
-- Add taglist prototype to status line.
