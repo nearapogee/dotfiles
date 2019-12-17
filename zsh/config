@@ -1,6 +1,15 @@
 autoload -U colors && colors
 autoload -U ~/.zsh/functions/*(:t)
 
+autoload -U compinit
+compinit
+
+# matches case insensitive for lowercase
+zstyle ':completion:*' matcher-list'm:{a-z}={A-Z}
+
+# pasting with taps doesn't perform completion
+zstyle ':completion:*' insert-tab pending
+
 if [[ -n $SSH_CONNECTION ]]; then
   export PS1='%{$fg[red]%}%m:%3~(git_info_for_prompt)%# %{$reset_color%}'
 else
