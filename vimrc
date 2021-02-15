@@ -141,7 +141,7 @@ endfunction
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 "ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](cache|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](cache|bundle|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " spell check toggle
 function! ToggleSpell()
@@ -234,4 +234,4 @@ au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 au BufNewFile,BufReadPost *.coffee setl ai
 
 " Fabrication Gem
-autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=model()
+"autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=model()
