@@ -14,5 +14,5 @@ fi
 if (( $+commands[chruby-exec] )) ; then
   source /usr/local/share/chruby/chruby.sh
   #chruby 2.6.5
-  chruby 2.7.2
+  chruby 2.7.4
 fi
