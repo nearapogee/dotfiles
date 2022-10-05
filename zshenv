@@ -1,6 +1,9 @@
 manpath=($manpath)
 fpath=(~/.zsh/functions $fpath)
 
+export NODE_DESCRIPTION="UX501V laptop"
+export OBSIDIAN_ROOT=~/Documents/obsidian-matt-20220101
+
 export ANDROID_SDK_ROOT=/home/matt/Android/Sdk
 export NODE_PATH=/usr/local/lib/node_modules
 
@@ -14,5 +17,5 @@ fi
 if (( $+commands[chruby-exec] )) ; then
   source /usr/local/share/chruby/chruby.sh
   #chruby 2.6.5
-  chruby 2.7.4
+  chruby 3.1.2
 fi
