@@ -1,3 +1,4 @@
+# NOTE moved to zshenv
 #if (( $+commands[rbenv] )) ; then
 #  eval "$(rbenv init - zsh)"
 #fi
@@ -5,4 +6,4 @@
 #  source /usr/local/share/chruby/chruby.sh
 #  chruby ruby-2.1
 #fi
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
