@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+CURRENT=$(pwd)
+
+cd $OBSIDIAN_ROOT && \
+  git log --oneline | head -n 12
+
+cd $PWD

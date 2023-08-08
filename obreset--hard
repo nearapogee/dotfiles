@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+CURRENT=$(pwd)
+
+cd $OBSIDIAN_ROOT && \
+  git reset --hard HEAD
+
+cd $CURRENT

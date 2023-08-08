@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+CURRENT=$(pwd)
+
+cd $OBSIDIAN_ROOT && \
+  git add . && \
+  git commit -m "$(uname -n) $NODE_DESCRIPTION updates."
+
+cd $CURRENT
