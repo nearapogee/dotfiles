@@ -36,3 +36,15 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+# Go installation
+export PATH="$PATH:/usr/local/go/bin"
+
+# Optional but strongly recommended: set GOPATH and add its bin to PATH
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+if (( $+commands[zoxide] )) ; then
+  eval "$(zoxide init zsh)"
+fi
+

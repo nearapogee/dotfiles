@@ -17,7 +17,7 @@ if (( $+commands[rbenv] )) ; then
 fi
 if (( $+commands[chruby-exec] )) ; then
   source /usr/local/share/chruby/chruby.sh
-  chruby 3.3.6
+  chruby 3.4.7
 fi
 
 #if (( $+commands[/home/linuxbrew/.linuxbrew/bin/brew] )) ; then
@@ -25,16 +25,34 @@ if [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+## needs to be after brew setup if installed with brew
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#
+## Disable pyenv prompt
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+#
+#if (( $+commands[pyenv] )) ; then
+#  eval "$(pyenv init -)"
+#  eval "$(pyenv init - --no-rehash)"
+#fi
+
 # needs to be after brew setup if installed with brew
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Disable pyenv prompt
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
 if (( $+commands[pyenv] )) ; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init - --no-rehash)"
 fi
 
 
-path=(~/bin ~/.npm-global/bin /usr/local/go/bin /usr/local/nginx/sbin /usr/local/apache-maven/bin /usr/local/bin /usr/local/sbin ~/.local/bin $path)
+path=(~/bin ~/.npm-global/bin /usr/local/go/bin /usr/local/nginx/sbin /usr/local/apache-maven/bin /usr/local/bin /usr/local/sbin ~/.local/bin /opt/nvim-linux-x86_64/bin $path)
 
 if (( $+commands[cargo] )) ; then
   source "$HOME/.cargo/env"
 fi
+. "$HOME/.cargo/env"

@@ -16,7 +16,7 @@ else
   export PS1='%{$fg[cyan]%} %3~$(git_info_for_prompt)%# %{$reset_color%}'
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 export LESS="-rXFK"
 
 #export CFLAGS=-D_FILE_OFFSET_BITS=64
